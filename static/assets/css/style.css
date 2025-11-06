@@ -1,0 +1,27 @@
+.hero {
+    min-height: 100vh;
+    background-image: url("/static/assets/img/coveralalbum.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* overlay gelap tipis */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.30);
+}
+
+/* supaya tulisan dan tombol di atas overlay */
+.hero > .container {
+    position: relative;
+    z-index: 2;
+    padding-top: 25px; /* ini yang bikin hilang garis putih */
+}
+
+/* hilangin margin default kalau masih ada */
+.hero h1 {
+    margin-top: 0 !important;
+}
